@@ -1,0 +1,149 @@
+@import '../../Globalstyle/globalstyle.scss';
+
+.Layout_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .sideBar_wrapper {
+        margin-top: 4rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        font-size: 1.6rem;
+    }
+
+    .sideBar_container {
+        background-color: var(--sideBar-color);
+        padding: 2rem;
+        margin: 0rem 4rem;
+        border-radius: 2rem;
+
+        .sideBar_title {
+            margin-bottom: 2rem;
+
+            img {
+                width: 80%;
+            }
+        }
+
+        .sideBar_menu {
+            margin: 2.4rem 1rem;
+            max-height: 20rem;
+
+            .sideBar_item {
+                padding: 1.2rem 1rem;
+                cursor: pointer;
+                opacity: 0.8;
+
+                i {
+                    margin-right: 1.2rem;
+                }
+
+                .sideBar_Link {
+                    text-decoration: none;
+                    color: var(--normal-font-color);
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        .sideBar_userContainer {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .user_imageContainer {
+                border-radius: 2rem;
+                width: 4rem;
+                margin-right: 1rem;
+            }
+
+            .user_name {
+                font-weight: 500;
+                flex: 1;
+            }
+
+            i {
+                opacity: 0.4;
+                margin-left: 2rem;
+                cursor: pointer;
+                padding: 1rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .content_wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: auto;
+        background-color: var(--backGround-color);
+        margin-top: 4rem;
+
+        .content_headerWrapper {
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: var(--backGround-color);
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-radius: 1rem;
+            margin-bottom: 4rem;
+
+            .header_welcome {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                .welcome_userName {
+                    font-size: 2.2rem;
+                    color: var(--normal-font-color);
+                    font-weight: 600;
+                    margin-bottom: 0.4rem;
+                }
+
+                .welcome_newSale {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: var(--fade-font-color);
+                }
+            }
+
+            .header_searchContainer {
+                margin-right: 4rem;
+                border: 1px solid var(--fade-font-color);
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-left: 2rem;
+                }
+
+                .searchInput {
+                    border-style: none;
+                    padding: 0rem 2rem;
+                    width: 86%;
+                    font-size: 1.4rem;
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

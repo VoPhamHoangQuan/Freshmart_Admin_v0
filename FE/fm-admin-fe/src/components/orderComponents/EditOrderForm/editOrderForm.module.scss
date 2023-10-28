@@ -1,0 +1,61 @@
+.popup_model,
+.popup_layout {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup_layout {
+    opacity: 0.6;
+    background-color: black;
+    z-index: 1;
+}
+
+.popup_container {
+    position: fixed;
+    vertical-align: center;
+    right: 35%;
+    left: 35%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 3rem 3rem;
+    z-index: 2;
+    animation: 2s slideDown;
+
+    span {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .controller {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @keyframes slideDown {
+        from {
+            top: -50%
+        }
+
+        to {
+            top: 0;
+        }
+    }
+
+}
+
+
+.test1 {
+    background-color: black;
+}
+
+.test2 {
+    background-color: blue;
+}
